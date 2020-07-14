@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp_000.AddTransactionPage"
+             Title="Proyecto Moneda" >
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Data">
+                <TableRoot>
+                    <TableSection  Title="Informacion de la transacción">
+                        <TextCell Text="Usuario  " Detail="Mohamed Abdul" ></TextCell>
+                        
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="13,0">
+                                <Label Text="Fecha" VerticalOptions="Center"></Label>
+                                <DatePicker x:Name="Fecha" Format="dd MMM yyyy" Date="05 Jun 2019" HorizontalOptions="FillAndExpand"></DatePicker>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection  Title="Descripción">
+                        <EntryCell x:Name="Descripcion" Placeholder="(e.g. Shopping)"></EntryCell>
+                    </TableSection>
+                    <TableSection>
+                        <TextCell Text="Categoria"  ></TextCell>
+                        <EntryCell x:Name="Categoria" Placeholder="(e.g. Impuestos)"></EntryCell>
+                    </TableSection>
+                    <TableSection>
+                        <TextCell  Text="Importe"/>
+                        <EntryCell x:Name="Importe" Label="$" Placeholder="1500"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Aceptar" FontSize="Large" HorizontalOptions="CenterAndExpand" Clicked="OnAceptButtonClicked">
+                
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

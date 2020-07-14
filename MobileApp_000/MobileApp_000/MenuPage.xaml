@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp_000.MenuPage"
+             Title="Proyecto Moneda">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#eee" >
+            <Button Text="Atras" BorderColor="#eee" Clicked="NavigateButton_OnClicked"/>
+            <TableView Intent="Menu">
+                <TableRoot>
+                    <TableSection Title="Menú">
+                        <ViewCell>
+                            <Button Text="Agregar Transacción" Clicked="AddTransButton_OnClicked"/>
+                        </ViewCell>
+                        <ViewCell>
+                            <Button Text="Modificar Transacción" Clicked="ModTransButton_OnClicked"/>
+                        </ViewCell>
+                        <ViewCell>
+                            <Button Text="Eliminar Transacción" />
+                        </ViewCell>
+                        <ViewCell>
+                            <Button Text="Exportar informarción"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

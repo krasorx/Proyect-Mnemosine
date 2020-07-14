@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp_000.UserCreate"
+             Title="Proyecto Moneda">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" Spacing="30" Padding="15">
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Creación de un nuevo usuario">
+                       
+                    </TableSection>
+                    <TableSection Title="Ingresar el nombre y apellido.">
+                        <EntryCell  Placeholder="Joseph Joestar" x:Name="username"/>
+                    </TableSection>
+                    <TableSection Title="Ingresar correo electronico">
+                        <EntryCell Placeholder="JoJo@gmail.com" x:Name="email"/>
+                    </TableSection>
+                    <TableSection Title="Ingresar el salario inicial">
+                        <EntryCell Placeholder="666"  x:Name="salary"/>
+                    </TableSection>
+                    <TableSection>
+                        <SwitchCell Text="Estoy de acuerdo con los terminos de uso" x:Name="agreement"/>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <Button x:Name="CreateBtn" Text="Crear" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Clicked="Createbtn_OnClicked"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

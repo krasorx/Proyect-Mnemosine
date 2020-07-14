@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp_000.ConfigurationPage"
+             Title="Proyecto Moneda">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Settings">
+                <TableRoot Title="Configuración">
+                    <TableSection>
+                        <TextCell Text="Configuración" Detail="Inicio de sesion y crear usuario">
+                        </TextCell>
+                        <ViewCell>
+                            <Button Text="Ingresar usuario"/>
+                        </ViewCell>
+                        <ViewCell>
+                            <Button Text="Crear nuevo usurio" Clicked="CreateUserButton_OnClicked"/>
+                        </ViewCell>
+                        <ViewCell>
+                            <Button Text="Perfil"/>
+                        </ViewCell>
+                        <SwitchCell Text="Notificaciones">
+                            
+                        </SwitchCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

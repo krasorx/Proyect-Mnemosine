@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileApp_000"
+             x:Class="MobileApp_000.MainPage"
+             
+             Title="Proyecto Moneda">
+    <ContentPage.Content>
+        
+
+        <StackLayout Padding="10" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical">
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Menú" HorizontalOptions="Start" BorderColor="AliceBlue" Clicked="NavigateButton_OnClicked" />
+                <Button Text="Configuración" HorizontalOptions="EndAndExpand" BorderColor="AliceBlue" Clicked="ConfigButton_OnClicked"/>
+            </StackLayout>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Saldo inicial :"
+                       HorizontalOptions="Start"/>
+                    <Entry x:Name="tbxSaldoInicial" PropertyChanged="tbxSaldoInicial_PropertyChanged" 
+                           Text="1000" FontSize="Small"
+                           Placeholder="1000"   
+                           HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Saldo Final :"
+                           HorizontalOptions="Start"/>
+                    <Label Text="{Binding SaldoFinal}"
+                           x:Name="lblSaldoFinal"
+                           HorizontalOptions="End"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Aumento ahorro total : " 
+                       HorizontalOptions="Start"/>
+                    <Label Text=" + 50%" 
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ahorrados este mes : " 
+                       HorizontalOptions="Start"/>
+                    <Label Text="500 " 
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Gastos" FontSize="Large" TextColor="OrangeRed"/>
+
+
+            <ListView x:Name="listita" VerticalOptions="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding MyCate}"
+                        Detail="{Binding MyImpTot}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="+" TextColor="White"  FontSize="Large" BackgroundColor="GreenYellow" VerticalOptions="End" HorizontalOptions="End"
+                    Opacity="70" Clicked="AddTransButton_OnClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
